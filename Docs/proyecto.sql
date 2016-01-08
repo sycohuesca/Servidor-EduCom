@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-12-2015 a las 16:40:11
+-- Tiempo de generación: 08-01-2016 a las 09:48:36
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -64,7 +64,7 @@ INSERT INTO `grupo` (`ID_GRUPO`, `NOMBRE`, `DESCRIPCION`, `FECHA_HORA_CREACION`,
 (1, 'Equipo directivo', 'Usuarios que pueden entrar en todos los grupos ver y editar y borrar mensajes y usuarios.', '2015-12-24 00:13:09', 9, 0),
 (2, 'Claustro', 'Grupo de todos los profesores y responsables lo del equipo directivo', '2015-12-16 18:19:46', 9, 1),
 (3, 'CCP', 'Grupo de jefes de departamento y equipo directivo y responsables equipo directivo', '2015-12-16 19:35:29', 9, 0),
-(4, 'Profesores', 'Grupo de todos los profesores y son todos responsables', '2015-12-19 09:42:35', 9, 0),
+(4, 'Profesores', 'Grupo de todos los profesores y son todos responsables', '2016-01-06 18:41:15', 9, 0),
 (5, 'Publicos', 'Grupo publicos', '2015-12-23 22:39:36', 9, 0),
 (6, 'Tutoria', 'Grupo para informar a los padres', '2015-11-09 16:10:59', 9, 0),
 (7, '1º de ESO D', 'Integrantes de 2! de ESo Grupo D', '2015-11-09 16:26:18', 9, 0),
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `ID_USUARIO` int(11) NOT NULL,
   `USER` varchar(50) NOT NULL,
   `PASSWORD` varchar(64) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `login`
@@ -156,11 +156,12 @@ INSERT INTO `miembro` (`ID_USUARIO`, `ID_GRUPO`, `FECHA_HORA`, `RESPONSABLE`) VA
 (9, 3, '2015-12-23 21:20:41', 1),
 (9, 5, '2015-12-23 22:39:36', 0),
 (10, 3, '2015-12-21 22:25:23', 0),
-(10, 4, '2015-12-19 09:42:35', 0),
+(10, 4, '2016-01-06 18:41:15', 0),
+(11, 4, '2016-01-06 18:41:15', 0),
 (11, 5, '2015-12-23 22:39:36', 0),
 (12, 1, '2015-12-29 13:09:52', 0),
 (12, 4, '2015-12-19 09:42:35', 0),
-(12, 5, '2015-12-23 22:39:36', 0),
+(12, 5, '2015-12-29 17:36:11', 1),
 (13, 4, '2015-12-29 13:12:39', 0),
 (13, 5, '2015-12-23 22:39:36', 0),
 (13, 7, '2015-12-19 09:48:37', 0),
@@ -182,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `tipo_usuario` (
 --
 
 INSERT INTO `tipo_usuario` (`ID_TIPO_USUARIO`, `NOMBRE`) VALUES
-(1, 'Equipo Directivo'),
+(1, 'Equipo Técnico'),
 (2, 'Profesor'),
 (3, 'Conserje'),
 (4, 'Alumno/a'),
@@ -198,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `ID_USUARIO` int(11) NOT NULL,
   `NOMBRE` varchar(64) NOT NULL,
   `ID_CENTRO` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `usuario`
@@ -303,7 +304,7 @@ ALTER TABLE `grupo`
 -- AUTO_INCREMENT de la tabla `login`
 --
 ALTER TABLE `login`
-  MODIFY `ID_LOGIN` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
+  MODIFY `ID_LOGIN` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT de la tabla `mensaje`
 --
@@ -318,7 +319,7 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `ID_USUARIO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `ID_USUARIO` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- Restricciones para tablas volcadas
 --
